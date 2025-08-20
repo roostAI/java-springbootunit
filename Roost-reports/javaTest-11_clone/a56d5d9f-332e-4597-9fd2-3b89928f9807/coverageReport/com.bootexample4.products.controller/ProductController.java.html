@@ -18,12 +18,12 @@ import com.bootexample4.products.repository.ProductRepository;
 
 	@GetMapping
 	public List&lt;Product&gt; getAllProducts() {
-<span class="nc" id="L21">		return productRepository.findAll();</span>
+<span class="fc" id="L21">		return productRepository.findAll();</span>
 	}
 
 	@PostMapping
 	public Product createProduct(@RequestBody Product product) {
-<span class="nc" id="L26">		return productRepository.save(product);</span>
+<span class="fc" id="L26">		return productRepository.save(product);</span>
 	}
 
 	@GetMapping(&quot;/{id}&quot;)

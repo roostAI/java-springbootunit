@@ -69,12 +69,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td align="left">18</td>
-<td>1</td>
+<td align="left">39</td>
+<td>13</td>
+<td>4</td>
 <td>0</td>
-<td>0</td>
-<td>94.4%</td>
-<td>7.498 s</td></tr></table><br />
+<td>56.4%</td>
+<td>8.660 s</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section><section><a id="Package_List"></a>
 <h2><a name="Package_List"></a>Package List</h2>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
@@ -94,7 +94,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.148 s</td></tr>
+<td>0.022 s</td></tr>
 <tr class="a">
 <td align="left"><a href="#com.bootexample4.products">com.bootexample4.products</a></td>
 <td>1</td>
@@ -102,7 +102,15 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>0%</td>
-<td>7.350 s</td></tr></table><br />
+<td>1.406 s</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller">com.bootexample4.products.controller</a></td>
+<td>21</td>
+<td>12</td>
+<td>4</td>
+<td>0</td>
+<td>23.8%</td>
+<td>7.232 s</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p><section><a id="com.bootexample4.products.model"></a>
 <h3><a name="com.bootexample4.products.model"></a>com.bootexample4.products.model</h3>
 <table border="0" class="bodyTable">
@@ -123,7 +131,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.016 s</td></tr>
+<td>0.005 s</td></tr>
 <tr class="a">
 <td align="left"><a href="#com.bootexample4.products.model.ProductGetIdTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#com.bootexample4.products.model.ProductGetIdTest">ProductGetIdTest</a></td>
@@ -132,7 +140,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.016 s</td></tr>
+<td>0.005 s</td></tr>
 <tr class="b">
 <td align="left"><a href="#com.bootexample4.products.model.ProductGetDescriptionTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#com.bootexample4.products.model.ProductGetDescriptionTest">ProductGetDescriptionTest</a></td>
@@ -141,7 +149,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.085 s</td></tr>
+<td>0.002 s</td></tr>
 <tr class="a">
 <td align="left"><a href="#com.bootexample4.products.model.ProductGetNameTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#com.bootexample4.products.model.ProductGetNameTest">ProductGetNameTest</a></td>
@@ -150,7 +158,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.031 s</td></tr></table></section><section><a id="com.bootexample4.products"></a>
+<td>0.010 s</td></tr></table></section><section><a id="com.bootexample4.products"></a>
 <h3><a name="com.bootexample4.products"></a>com.bootexample4.products</h3>
 <table border="0" class="bodyTable">
 <tr class="a">
@@ -170,7 +178,54 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>0%</td>
-<td>7.350 s</td></tr></table></section><br /></section><section><a id="Test_Cases"></a>
+<td>1.406 s</td></tr></table></section><section><a id="com.bootexample4.products.controller"></a>
+<h3><a name="com.bootexample4.products.controller"></a>com.bootexample4.products.controller</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>-</th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors</th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerCreateProductTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#com.bootexample4.products.controller.ProductControllerCreateProductTest">ProductControllerCreateProductTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>5.657 s</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest">ProductControllerGetProductByIdTest</a></td>
+<td>6</td>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+<td>0%</td>
+<td>0.121 s</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
+<td><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest">ProductControllerGetAllProductsTest</a></td>
+<td>7</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>57.1%</td>
+<td>0.223 s</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest">ProductControllerDeleteProductTest</a></td>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+<td>1.231 s</td></tr></table></section><br /></section><section><a id="Test_Cases"></a>
 <h2><a name="Test_Cases"></a>Test Cases</h2>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><section><a id="com.bootexample4.products.model.ProductGetPriceTest"></a>
 <h3><a name="ProductGetPriceTest"></a>ProductGetPriceTest</h3>
@@ -182,21 +237,27 @@ function toggleDisplay(elementId) {
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetPriceTest.shouldReturnZeroWhenPriceIsNotSet"></a>shouldReturnZeroWhenPriceIsNotSet</td>
-<td>0.003 s</td></tr>
+<td>0 s</td></tr>
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetPriceTest.shouldReturnCorrectPriceWhenPositiveValueIsSet"></a>shouldReturnCorrectPriceWhenPositiveValueIsSet</td>
-<td>0.001 s</td></tr>
+<td>0 s</td></tr>
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetPriceTest.shouldHandleBoundaryValueForPrice"></a>shouldHandleBoundaryValueForPrice</td>
-<td>0.001 s</td></tr></table></section><section><a id="com.bootexample4.products.model.ProductGetIdTest"></a>
+<td>0 s</td></tr></table></section><section><a id="com.bootexample4.products.controller.ProductControllerCreateProductTest"></a>
+<h3><a name="ProductControllerCreateProductTest"></a>ProductControllerCreateProductTest</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerCreateProductTest.validProductCreation"></a>validProductCreation</td>
+<td>0.019 s</td></tr></table></section><section><a id="com.bootexample4.products.model.ProductGetIdTest"></a>
 <h3><a name="ProductGetIdTest"></a>ProductGetIdTest</h3>
 <table border="0" class="bodyTable">
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetIdTest.getIdHandlesMinimumBoundaryValue"></a>getIdHandlesMinimumBoundaryValue</td>
-<td>0.006 s</td></tr>
+<td>0.001 s</td></tr>
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetIdTest.getIdHandlesMaximumBoundaryValue"></a>getIdHandlesMaximumBoundaryValue</td>
@@ -204,18 +265,544 @@ function toggleDisplay(elementId) {
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetIdTest.getIdReturnsValueWhenIdIsSet"></a>getIdReturnsValueWhenIdIsSet</td>
-<td>0.002 s</td></tr>
+<td>0.001 s</td></tr>
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetIdTest.getIdReturnsNullWhenIdIsNotSet"></a>getIdReturnsNullWhenIdIsNotSet</td>
-<td>0.001 s</td></tr></table></section><section><a id="com.bootexample4.products.ProductsApplicationTests"></a>
+<td>0.001 s</td></tr></table></section><section><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest"></a>
+<h3><a name="ProductControllerGetProductByIdTest"></a>ProductControllerGetProductByIdTest</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError">invalidProductIdReturnsNotFoundError</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError-on"> - </span>[ Detail ]</a></div></td>
+<td>0.031 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError(ProductControllerGetProductByIdTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError">repositoryFailureReturnsInternalServerError</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError-on"> - </span>[ Detail ]</a></div></td>
+<td>0.002 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError(ProductControllerGetProductByIdTest.java:242)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound">negativeProductIdShouldReturnNotFound</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound-on"> - </span>[ Detail ]</a></div></td>
+<td>0.001 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound(ProductControllerGetProductByIdTest.java:212)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully">validProductIdReturnsProductSuccessfully</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully-on"> - </span>[ Detail ]</a></div></td>
+<td>0.002 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully(ProductControllerGetProductByIdTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException">nullProductIdThrowsException</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException-on"> - </span>[ Detail ]</a></div></td>
+<td>0.015 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException-failure" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3083)
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException(ProductControllerGetProductByIdTest.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.controller.ProductController.getProductById(java.lang.Long)&quot; because &quot;this.productController&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.lambda$nullProductIdThrowsException$0(ProductControllerGetProductByIdTest.java:203)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 72 more
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue"></a><a href="#com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue">largeProductIdExceedsMaximumValue</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue-on"> - </span>[ Detail ]</a></div></td>
+<td>0.002 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue(ProductControllerGetProductByIdTest.java:227)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr></table></section><section><a id="com.bootexample4.products.ProductsApplicationTests"></a>
 <h3><a name="ProductsApplicationTests"></a>ProductsApplicationTests</h3>
 <table border="0" class="bodyTable">
 <tr class="a">
 <td align="left"><a href="#com.bootexample4.products.ProductsApplicationTests.testCreate"><img src="images/icon_error_sml.gif" alt="" /></a></td>
 <td><a id="TC_com.bootexample4.products.ProductsApplicationTests.testCreate"></a><a href="#com.bootexample4.products.ProductsApplicationTests.testCreate">testCreate</a>
 <div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.ProductsApplicationTests.testCreate');"><span style="display:inline;" id="com.bootexample4.products.ProductsApplicationTests.testCreate-off"> + </span><span style="display:none;" id="com.bootexample4.products.ProductsApplicationTests.testCreate-on"> - </span>[ Detail ]</a></div></td>
-<td>0.829 s</td></tr>
+<td>0.570 s</td></tr>
 <tr class="b">
 <td align="left">-</td>
 <td>Unable to connect to socket /127.0.0.1:3000</td>
@@ -323,7 +910,305 @@ Caused by: java.net.ConnectException: Connection refused
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetDescriptionTest.descriptionShouldReturnInitialValueOfNull"></a>descriptionShouldReturnInitialValueOfNull</td>
-<td>0.043 s</td></tr></table></section><section><a id="com.bootexample4.products.model.ProductGetNameTest"></a>
+<td>0.001 s</td></tr></table></section><section><a id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest"></a>
+<h3><a name="ProductControllerGetAllProductsTest"></a>ProductControllerGetAllProductsTest</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsEmptyListWhenRepositoryIsEmpty"></a>returnsEmptyListWhenRepositoryIsEmpty</td>
+<td>0.029 s</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected"></a><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected">returnsListOfProductAsExpected</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected-on"> - </span>[ Detail ]</a></div></td>
+<td>0.003 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>expected: &lt;true&gt; but was: &lt;false&gt;</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected-failure" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:180)
+	at com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected(ProductControllerGetAllProductsTest.java:256)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully"></a><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully">handlesNullResponseFromRepositoryGracefully</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully-on"> - </span>[ Detail ]</a></div></td>
+<td>0.003 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>expected: not &lt;null&gt;</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully-failure" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>org.opentest4j.AssertionFailedError: expected: not &lt;null&gt;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+	at org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:301)
+	at com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully(ProductControllerGetAllProductsTest.java:199)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesLargeDataSetEfficiently"></a>handlesLargeDataSetEfficiently</td>
+<td>0.164 s</td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsAllProductsWhenRepositoryHasMultipleProducts"></a>returnsAllProductsWhenRepositoryHasMultipleProducts</td>
+<td>0.003 s</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully"></a><a href="#com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully">handlesRepositoryExceptionGracefully</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully-on"> - </span>[ Detail ]</a></div></td>
+<td>0.004 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Unexpected exception thrown: java.lang.RuntimeException: Repository Error</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully-failure" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.RuntimeException: Repository Error
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3136)
+	at com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully(ProductControllerGetAllProductsTest.java:233)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: java.lang.RuntimeException: Repository Error
+	at com.bootexample4.products.controller.ProductController.getAllProducts(ProductController.java:21)
+	at com.bootexample4.products.controller.ProductControllerGetAllProductsTest.lambda$handlesRepositoryExceptionGracefully$0(ProductControllerGetAllProductsTest.java:234)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 72 more
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerGetAllProductsTest.interactsWithRepositoryFindAllMethod"></a>interactsWithRepositoryFindAllMethod</td>
+<td>0.010 s</td></tr></table></section><section><a id="com.bootexample4.products.model.ProductGetNameTest"></a>
 <h3><a name="ProductGetNameTest"></a>ProductGetNameTest</h3>
 <table border="0" class="bodyTable">
 <tr class="a">
@@ -333,7 +1218,7 @@ Caused by: java.net.ConnectException: Connection refused
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetNameTest.getNameReturnsNullWhenNotSet"></a>getNameReturnsNullWhenNotSet</td>
-<td>0.002 s</td></tr>
+<td>0 s</td></tr>
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetNameTest.getNameReturnsEmptyStringWhenSetToEmpty"></a>getNameReturnsEmptyStringWhenSetToEmpty</td>
@@ -353,14 +1238,685 @@ Caused by: java.net.ConnectException: Connection refused
 <tr class="a">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetNameTest.getNameShouldRespectCaseSensitivity"></a>getNameShouldRespectCaseSensitivity</td>
-<td>0.001 s</td></tr>
+<td>0 s</td></tr>
 <tr class="b">
 <td align="left"><img src="images/icon_success_sml.gif" alt="" /></td>
 <td><a id="TC_com.bootexample4.products.model.ProductGetNameTest.getNameHandlesSpecialCharactersCorrectly"></a>getNameHandlesSpecialCharactersCorrectly</td>
-<td>0.005 s</td></tr></table></section><br /></section><section><a id="Failure_Details"></a>
+<td>0 s</td></tr></table></section><section><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest"></a>
+<h3><a name="ProductControllerDeleteProductTest"></a>ProductControllerDeleteProductTest</h3>
+<table border="0" class="bodyTable">
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId">noDeleteOperationPerformedForInvalidId</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId-on"> - </span>[ Detail ]</a></div></td>
+<td>0.041 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId(ProductControllerDeleteProductTest.java:198)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct">handleRepositoryExceptionOnDeleteProduct</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct-on"> - </span>[ Detail ]</a></div></td>
+<td>0.003 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct(ProductControllerDeleteProductTest.java:265)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById">deleteNonExistentProductById</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById-on"> - </span>[ Detail ]</a></div></td>
+<td>0.003 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById(ProductControllerDeleteProductTest.java:185)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct">validateHttpStatusCodesForDeleteProduct</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct-on"> - </span>[ Detail ]</a></div></td>
+<td>0.005 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct(ProductControllerDeleteProductTest.java:244)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction">verifyCorrectRepositoryInteraction</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction-on"> - </span>[ Detail ]</a></div></td>
+<td>0.002 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction(ProductControllerDeleteProductTest.java:228)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="b">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct">handleNullIdInputForDeleteProduct</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct-on"> - </span>[ Detail ]</a></div></td>
+<td>0.001 s</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="b" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct(ProductControllerDeleteProductTest.java:210)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr>
+<tr class="a">
+<td align="left"><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a id="TC_com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById"></a><a href="#com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById">deleteExistingProductById</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay('com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById');"><span style="display:inline;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById-off"> + </span><span style="display:none;" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById-on"> - </span>[ Detail ]</a></div></td>
+<td>0.002 s</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td>
+<td>-</td></tr>
+<tr class="a" id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById-error" style="display:none;">
+<td align="left">-</td>
+<td>
+<div class="source">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null
+	at com.bootexample4.products.controller.ProductController.deleteProduct(ProductController.java:49)
+	at com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById(ProductControllerDeleteProductTest.java:171)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>-</td></tr></table></section><br /></section><section><a id="Failure_Details"></a>
 <h2><a name="Failure_Details"></a>Failure Details</h2>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
 <table border="0" class="bodyTable">
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.invalidProductIdReturnsNotFoundError"></a>invalidProductIdReturnsNotFoundError</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="invalidProductIdReturnsNotFoundError-error">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:185</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.repositoryFailureReturnsInternalServerError"></a>repositoryFailureReturnsInternalServerError</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="repositoryFailureReturnsInternalServerError-error">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:242</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.negativeProductIdShouldReturnNotFound"></a>negativeProductIdShouldReturnNotFound</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="negativeProductIdShouldReturnNotFound-error">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:212</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.validProductIdReturnsProductSuccessfully"></a>validProductIdReturnsProductSuccessfully</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="validProductIdReturnsProductSuccessfully-error">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:170</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.nullProductIdThrowsException"></a>nullProductIdThrowsException</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: &lt;java.lang.IllegalArgumentException&gt; but was: &lt;java.lang.NullPointerException&gt;</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="nullProductIdThrowsException-failure">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:202</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetProductByIdTest.largeProductIdExceedsMaximumValue"></a>largeProductIdExceedsMaximumValue</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="largeProductIdExceedsMaximumValue-error">com.bootexample4.products.controller.ProductControllerGetProductByIdTest:227</div></td></tr>
 <tr class="a">
 <td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
 <td><a id="com.bootexample4.products.ProductsApplicationTests.testCreate"></a>testCreate</td></tr>
@@ -370,7 +1926,107 @@ Caused by: java.net.ConnectException: Connection refused
 <tr class="a">
 <td align="left">-</td>
 <td>
-<div id="testCreate-error">com.bootexample4.products.ProductsApplicationTests:24</div></td></tr></table><br /></section>
+<div id="testCreate-error">com.bootexample4.products.ProductsApplicationTests:24</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.returnsListOfProductAsExpected"></a>returnsListOfProductAsExpected</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="returnsListOfProductAsExpected-failure">com.bootexample4.products.controller.ProductControllerGetAllProductsTest:256</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesNullResponseFromRepositoryGracefully"></a>handlesNullResponseFromRepositoryGracefully</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>org.opentest4j.AssertionFailedError: expected: not &lt;null&gt;</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="handlesNullResponseFromRepositoryGracefully-failure">com.bootexample4.products.controller.ProductControllerGetAllProductsTest:199</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerGetAllProductsTest.handlesRepositoryExceptionGracefully"></a>handlesRepositoryExceptionGracefully</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>org.opentest4j.AssertionFailedError: Unexpected exception thrown: java.lang.RuntimeException: Repository Error</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="handlesRepositoryExceptionGracefully-failure">com.bootexample4.products.controller.ProductControllerGetAllProductsTest:233</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.noDeleteOperationPerformedForInvalidId"></a>noDeleteOperationPerformedForInvalidId</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="noDeleteOperationPerformedForInvalidId-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:198</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleRepositoryExceptionOnDeleteProduct"></a>handleRepositoryExceptionOnDeleteProduct</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="handleRepositoryExceptionOnDeleteProduct-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:265</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteNonExistentProductById"></a>deleteNonExistentProductById</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="deleteNonExistentProductById-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:185</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.validateHttpStatusCodesForDeleteProduct"></a>validateHttpStatusCodesForDeleteProduct</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="validateHttpStatusCodesForDeleteProduct-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:244</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.verifyCorrectRepositoryInteraction"></a>verifyCorrectRepositoryInteraction</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="verifyCorrectRepositoryInteraction-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:228</div></td></tr>
+<tr class="b">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.handleNullIdInputForDeleteProduct"></a>handleNullIdInputForDeleteProduct</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>
+<div id="handleNullIdInputForDeleteProduct-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:210</div></td></tr>
+<tr class="a">
+<td align="left"><img src="images/icon_error_sml.gif" alt="" /></td>
+<td><a id="com.bootexample4.products.controller.ProductControllerDeleteProductTest.deleteExistingProductById"></a>deleteExistingProductById</td></tr>
+<tr class="b">
+<td align="left">-</td>
+<td>java.lang.NullPointerException: Cannot invoke &quot;com.bootexample4.products.repository.ProductRepository.findById(Object)&quot; because &quot;this.productRepository&quot; is null</td></tr>
+<tr class="a">
+<td align="left">-</td>
+<td>
+<div id="deleteExistingProductById-error">com.bootexample4.products.controller.ProductControllerDeleteProductTest:171</div></td></tr></table><br /></section>
       </div>
     </div>
     <div class="clear">

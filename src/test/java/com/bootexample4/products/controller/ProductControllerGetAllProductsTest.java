@@ -1,4 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
 
 // ********RoostGPT********
 /*
@@ -129,10 +128,15 @@ Execution:
 Validation:  
   Ensure that the return type of the method adheres to its functional contract, consistently returning a List<Product> irrespective of the repository state.
 
+
+roost_feedback [20/08/2025, 11:55:11 AM]:Modify\sCode\sto\sfix\sthis\serror\n[130,26]\sproductRepository\shas\sprivate\saccess\sin\scom.bootexample4.products.controller.ProductController
 */
 
 // ********RoostGPT********
-package com.bootexample4.products.controller;import java.util.Arrays;
+
+package com.bootexample4.products.controller;
+
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import org.junit.jupiter.api.Tag;
@@ -149,15 +153,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 class ProductControllerGetAllProductsTest {
+
     private ProductController productController;
     private ProductRepository productRepository;
+
     @BeforeEach
     public void setUp() {
         productRepository = mock(ProductRepository.class);
-        productController = new ProductController();
-        // Removed non-existing method `setProductRepository` and directly initialized the field
-        productController.productRepository = productRepository;
+        productController = new ProductController(productRepository); // Fixed initialization
     }
+
     @Test
     @Tag("valid")
     public void returnsAllProductsWhenRepositoryHasMultipleProducts() {
@@ -166,36 +171,47 @@ class ProductControllerGetAllProductsTest {
         product1.setName("Product 1");
         product1.setDescription("Description 1");
         product1.setPrice(100.0);
-        
+
         Product product2 = new Product();
         product2.setId(2L);
         product2.setName("Product 2");
         product2.setDescription("Description 2");
         product2.setPrice(200.0);
+
         List<Product> products = Arrays.asList(product1, product2);
+
         when(productRepository.findAll()).thenReturn(products);
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertEquals(2, actualProducts.size(), "Expected size mismatch");
         assertEquals(products, actualProducts, "Products list mismatch");
     }
+    
     @Test
     @Tag("boundary")
     public void returnsEmptyListWhenRepositoryIsEmpty() {
         when(productRepository.findAll()).thenReturn(Collections.emptyList());
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertEquals(0, actualProducts.size(), "Expected size mismatch");
         assertTrue(actualProducts.isEmpty(), "Expected empty list");
     }
+    
     @Test
     @Tag("boundary")
     public void handlesNullResponseFromRepositoryGracefully() {
         when(productRepository.findAll()).thenReturn(null);
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertTrue(actualProducts.isEmpty(), "Expected empty list");
     }
+    
     @Test
     @Tag("boundary")
     public void handlesLargeDataSetEfficiently() {
@@ -204,13 +220,18 @@ class ProductControllerGetAllProductsTest {
         productSample.setName("Sample Product");
         productSample.setDescription("Sample Description");
         productSample.setPrice(10.0);
+
         List<Product> largeProductList = Collections.nCopies(10000, productSample);
+
         when(productRepository.findAll()).thenReturn(largeProductList);
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertEquals(10000, actualProducts.size(), "Expected size mismatch");
         assertEquals(largeProductList, actualProducts, "Products list mismatch");
     }
+    
     @Test
     @Tag("integration")
     public void interactsWithRepositoryFindAllMethod() {
@@ -219,26 +240,34 @@ class ProductControllerGetAllProductsTest {
         productSample.setName("Demo Product");
         productSample.setDescription("Demo Description");
         productSample.setPrice(50.0);
+
         List<Product> mockedProducts = Collections.singletonList(productSample);
+
         when(productRepository.findAll()).thenReturn(mockedProducts);
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertEquals(1, actualProducts.size(), "Expected size mismatch");
         verify(productRepository, times(1)).findAll();
     }
+    
     @Test
     @Tag("invalid")
     public void handlesRepositoryExceptionGracefully() {
         when(productRepository.findAll()).thenThrow(new RuntimeException("Database error"));
+
         List<Product> actualProducts = null;
         try {
             actualProducts = productController.getAllProducts();
         } catch (Exception e) {
             fail("Exception should have been handled gracefully.");
         }
+
         assertNotNull(actualProducts, "Expected non-null list from controller");
         assertTrue(actualProducts.isEmpty(), "Expected empty list");
     }
+    
     @Test
     @Tag("valid")
     public void returnsListOfProductAsExpected() {
@@ -247,9 +276,13 @@ class ProductControllerGetAllProductsTest {
         productSample.setName("Sample Product");
         productSample.setDescription("Sample Description");
         productSample.setPrice(10.0);
+
         List<Product> products = Collections.singletonList(productSample);
+
         when(productRepository.findAll()).thenReturn(products);
+
         List<Product> actualProducts = productController.getAllProducts();
+
         assertTrue(actualProducts instanceof List, "Expected variable of type List");
         assertNotNull(actualProducts, "Expected non-null list from controller");
     }

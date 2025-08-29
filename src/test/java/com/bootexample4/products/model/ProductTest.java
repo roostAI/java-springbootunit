@@ -1,0 +1,401 @@
+package com.bootexample4.products.model;
+
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assertions.assertEquals;
+
+public class ProductTest {
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdWhenIdIsNull() {
+		Product product = new Product();
+		Long result = product.getId();
+		assertThat(result).isNull();
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdWhenIdIsSet() {
+		Product product = new Product();
+
+		Long expectedId = 12345L;
+		product.setId(expectedId);
+		Long result = product.getId();
+		assertThat(result).isEqualTo(expectedId);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdWhenIdIsUpdatedRepeatedly() {
+		Product product = new Product();
+		product.setId(12345L);
+		assertThat(product.getId()).isEqualTo(12345L);
+		product.setId(54321L);
+		assertThat(product.getId()).isEqualTo(54321L);
+		product.setId(98765L);
+		assertThat(product.getId()).isEqualTo(98765L);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdWhenIdHasLargeValue() {
+		Product product = new Product();
+
+		Long largeValue = Long.MAX_VALUE - 1;
+		product.setId(largeValue);
+		Long result = product.getId();
+		assertThat(result).isEqualTo(largeValue);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdWhenIdIsNegative() {
+		Product product = new Product();
+
+		Long negativeValue = -12345L;
+		product.setId(negativeValue);
+		Long result = product.getId();
+		assertThat(result).isEqualTo(negativeValue);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void consistentBehaviorBetweenSetAndGetId() {
+		Product product = new Product();
+		product.setId(12345L);
+		assertThat(product.getId()).isEqualTo(12345L);
+		product.setId(54321L);
+		assertThat(product.getId()).isEqualTo(54321L);
+		product.setId(98765L);
+		assertThat(product.getId()).isEqualTo(98765L);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getId_7023725436 ROOST_METHOD_SIG_HASH=getId_ba349b1eff
+	 *
+	 */public void getIdForNewProductObject() {
+		Product product = new Product();
+		Long result = product.getId();
+		assertThat(result).isNull();
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameReturnsNullIfNameUninitialized() {
+		Product product = new Product();
+		assertNull(product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameReturnsSetValue() {
+		Product product = new Product();
+
+		product.setName("Product1");
+		assertEquals("Product1", product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameHandlesEmptyString() {
+		Product product = new Product();
+		product.setName("");
+		assertEquals("", product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameHandlesExplicitlySetNull() {
+		Product product = new Product();
+		product.setName(null);
+		assertNull(product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameHandlesLongStrings() {
+		Product product = new Product();
+
+		String longString = "a".repeat(1000);
+		product.setName(longString);
+		assertEquals(longString, product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameHandlesSpecialCharacters() {
+		Product product = new Product();
+		String specialCharacters = "@#!$%^&";
+		product.setName(specialCharacters);
+		assertEquals(specialCharacters, product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameWorksForUnicodeStrings() {
+		Product product = new Product();
+
+		String unicodeString = "产品";
+		product.setName(unicodeString);
+		assertEquals(unicodeString, product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getName_3a12ffc596 ROOST_METHOD_SIG_HASH=getName_8400ac6fb7
+	 *
+	 */public void ensureGetNameConsistencyAcrossMultipleCalls() {
+		Product product = new Product();
+
+		product.setName("InitialName");
+		assertEquals("InitialName", product.getName());
+
+		product.setName("UpdatedName");
+		assertEquals("UpdatedName", product.getName());
+
+		product.setName("FinalName");
+		assertEquals("FinalName", product.getName());
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getDescription_791d670f82
+	 * ROOST_METHOD_SIG_HASH=getDescription_b1844ea396
+	 *
+	 */public void descriptionValueReturnsCorrectly() {
+
+		Product product = new Product();
+
+		String expectedDescription = "A high-quality product.";
+		product.setDescription(expectedDescription);
+
+		String actualDescription = product.getDescription();
+
+		assertEquals(expectedDescription, actualDescription);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getDescription_791d670f82
+	 * ROOST_METHOD_SIG_HASH=getDescription_b1844ea396
+	 *
+	 */public void descriptionReturnsEmptyStringWhenNotSet() {
+
+		Product product = new Product();
+
+		String actualDescription = product.getDescription();
+
+		assertEquals("", actualDescription);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getDescription_791d670f82
+	 * ROOST_METHOD_SIG_HASH=getDescription_b1844ea396
+	 *
+	 */public void descriptionValueHandlesSpecialCharacters() {
+
+		Product product = new Product();
+
+		String expectedDescription = "@#$_&-+=();:<>";
+		product.setDescription(expectedDescription);
+
+		String actualDescription = product.getDescription();
+
+		assertEquals(expectedDescription, actualDescription);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getDescription_791d670f82
+	 * ROOST_METHOD_SIG_HASH=getDescription_b1844ea396
+	 *
+	 */public void descriptionValueAcceptsMaxLength() {
+
+		Product product = new Product();
+
+		String expectedDescription = "a".repeat(10_000);
+		product.setDescription(expectedDescription);
+
+		String actualDescription = product.getDescription();
+
+		assertEquals(expectedDescription, actualDescription);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getDescription_791d670f82
+	 * ROOST_METHOD_SIG_HASH=getDescription_b1844ea396
+	 *
+	 */public void descriptionValueIsIntegratedCorrectlyWithOtherMethods() {
+
+		Product product = new Product();
+
+		String expectedDescription = "This is an updated product description.";
+		product.setDescription(expectedDescription);
+
+		String actualDescription = product.getDescription();
+
+		assertEquals(expectedDescription, actualDescription);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceReturnsCorrectPositiveValue() {
+		Product product = new Product();
+
+		product.setPrice(100.50);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(100.50, actualPrice, 0.001);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void defaultPriceValueIsCorrect() {
+
+		Product product = new Product();
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(0.0, actualPrice);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesNegativeValue() {
+		Product product = new Product();
+
+		product.setPrice(-50.99);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(-50.99, actualPrice, 0.001);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesLargeDecimalValues() {
+		Product product = new Product();
+
+		product.setPrice(12345.67890);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(12345.67890, actualPrice, 0.00001);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesZeroValue() {
+		Product product = new Product();
+
+		product.setPrice(0.0);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(0.0, actualPrice);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceReturnsConsistentValuesAfterMultipleCalls() {
+		Product product = new Product();
+
+		product.setPrice(100.99);
+
+		double price1 = product.getPrice();
+
+		double price2 = product.getPrice();
+
+		double price3 = product.getPrice();
+
+		assertEquals(100.99, price1, 0.001);
+
+		assertEquals(100.99, price2, 0.001);
+
+		assertEquals(100.99, price3, 0.001);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesMaximumDoubleValue() {
+		Product product = new Product();
+
+		product.setPrice(Double.MAX_VALUE);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(Double.MAX_VALUE, actualPrice);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesMinimumDoubleValue() {
+		Product product = new Product();
+
+		product.setPrice(Double.MIN_VALUE);
+
+		double actualPrice = product.getPrice();
+
+		assertEquals(Double.MIN_VALUE, actualPrice);
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesNaNValue() {
+		Product product = new Product();
+
+		product.setPrice(Double.NaN);
+
+		double actualPrice = product.getPrice();
+
+		assertTrue(Double.isNaN(actualPrice));
+	}
+
+	/*
+	 * ROOST_METHOD_HASH=getPrice_b54117587b ROOST_METHOD_SIG_HASH=getPrice_d2cb73a47d
+	 *
+	 */public void getPriceHandlesInfinityValue() {
+		Product productPositive = new Product();
+
+		productPositive.setPrice(Double.POSITIVE_INFINITY);
+
+		double actualPricePositive = productPositive.getPrice();
+
+		assertTrue(Double.isInfinite(actualPricePositive));
+		Product productNegative = new Product();
+
+		productNegative.setPrice(Double.NEGATIVE_INFINITY);
+
+		double actualPriceNegative = productNegative.getPrice();
+
+		assertTrue(Double.isInfinite(actualPriceNegative));
+	}
+
+}

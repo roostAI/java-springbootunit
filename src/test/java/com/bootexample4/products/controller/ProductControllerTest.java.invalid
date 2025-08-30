@@ -1,0 +1,418 @@
+//This single test file is marked invalid as it contains compilation errors.
+package com.bootexample4.products.controller;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.assertj.core.api.Assertions;
+import com.bootexample4.products.model.Product;
+import com.bootexample4.products.repository.ProductRepository;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation;
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.MockitoAnnotations;
+import org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api;
+import java.util.Optional;
+
+@ExtendWith(MockitoExtension.class)
+public class ProductControllerTest {
+
+  // Merged class fields
+  private ProductRepository productRepository;
+  private ProductController productController;
+
+  // Merged test methods
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void validateSuccessfulRetrievalOfAllProducts() {
+    
+    Product product1 = new Product();
+    product1.setId(1L);
+    product1.setName("Product1");
+    product1.setDescription("Description1");
+    product1.setPrice(100.0);
+    Product product2 = new Product();
+    product2.setId(2L);
+    product2.setName("Product2");
+    product2.setDescription("Description2");
+    product2.setPrice(200.0);
+    List<Product> mockProducts = Arrays.asList(product1, product2);
+    Mockito.when(productRepository.findAll()).thenReturn(mockProducts);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    Assertions.assertThat(result).isNotNull();
+    Assertions.assertThat(result.size()).isEqualTo(mockProducts.size());
+    Assertions.assertThat(result).containsExactlyElementsOf(mockProducts);
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void handleNullReturnFromRepository() {
+    
+    Mockito.when(productRepository.findAll()).thenReturn(null);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    
+    Assertions.assertThat(result).isEqualTo(null);
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void handleEmptyProductList() {
+    
+    List<Product> emptyList = new ArrayList<>();
+    Mockito.when(productRepository.findAll()).thenReturn(emptyList);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    Assertions.assertThat(result).isNotNull();
+    Assertions.assertThat(result).isEmpty();
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void validateLargeNumberOfProductsRetrieval() {
+    
+    List<Product> largeProductList = new ArrayList<>();
+    for (long i = 1; i <= 1000; i++) {
+        Product product = new Product();
+        product.setId(i);
+        product.setName("Product" + i);
+        product.setDescription("Description" + i);
+        product.setPrice(i * 10.0);
+        largeProductList.add(product);
+    }
+    Mockito.when(productRepository.findAll()).thenReturn(largeProductList);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    Assertions.assertThat(result).isNotNull();
+    Assertions.assertThat(result.size()).isEqualTo(largeProductList.size());
+    Assertions.assertThat(result).containsExactlyElementsOf(largeProductList);
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void validateProductListIntegrity() {
+    
+    Product product1 = new Product();
+    product1.setId(1L);
+    product1.setName("Product1");
+    product1.setDescription("Description1");
+    product1.setPrice(100.0);
+    Product product2 = new Product();
+    product2.setId(2L);
+    product2.setName("Product2");
+    product2.setDescription("Description2");
+    product2.setPrice(200.0);
+    List<Product> mockProducts = Arrays.asList(product1, product2);
+    Mockito.when(productRepository.findAll()).thenReturn(mockProducts);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    Assertions.assertThat(result).isNotNull();
+    Assertions.assertThat(result).hasSize(mockProducts.size());
+    for (int i = 0; i < result.size(); i++) {
+        Assertions.assertThat(result.get(i).getId()).isEqualTo(mockProducts.get(i).getId());
+        Assertions.assertThat(result.get(i).getName()).isEqualTo(mockProducts.get(i).getName());
+        Assertions.assertThat(result.get(i).getDescription()).isEqualTo(mockProducts.get(i).getDescription());
+        Assertions.assertThat(result.get(i).getPrice()).isEqualTo(mockProducts.get(i).getPrice());
+    }
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void handleRepositoryThrowsException() {
+    
+    Mockito.when(productRepository.findAll()).thenThrow(new RuntimeException("Database Error"));
+    
+    Assertions.assertThatThrownBy(() -> productController.getAllProducts()).isInstanceOf(RuntimeException.class).hasMessageContaining("Database Error");
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void validateInteractionWithRepository() {
+    
+    Mockito.when(productRepository.findAll()).thenReturn(new ArrayList<>());
+    
+    productController.getAllProducts();
+    
+    Mockito.verify(productRepository, Mockito.times(1)).findAll();
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/public void validateMultipleConsecutiveCalls() {
+    
+    Product product1 = new Product();
+    product1.setId(1L);
+    product1.setName("Product1");
+    product1.setDescription("Description1");
+    product1.setPrice(100.0);
+    Product product2 = new Product();
+    product2.setId(2L);
+    product2.setName("Product2");
+    product2.setDescription("Description2");
+    product2.setPrice(200.0);
+    List<Product> mockProducts = Arrays.asList(product1, product2);
+    Mockito.when(productRepository.findAll()).thenReturn(mockProducts);
+    
+    List<Product> result1 = productController.getAllProducts();
+    List<Product> result2 = productController.getAllProducts();
+    
+    Assertions.assertThat(result1).isNotNull();
+    Assertions.assertThat(result2).isNotNull();
+    Assertions.assertThat(result1).isEqualTo(result2);
+}
+
+/*ROOST_METHOD_HASH=createProduct_16b670a647
+ROOST_METHOD_SIG_HASH=createProduct_36b748883e
+
+*/void setUp() {
+    MockitoAnnotations.openMocks(this);
+}
+
+/*ROOST_METHOD_HASH=createProduct_16b670a647
+ROOST_METHOD_SIG_HASH=createProduct_36b748883e
+
+*/public void verifyProductCreationWithValidInput() {
+    
+    Product mockProduct = new Product();
+    
+    mockProduct.setName("Sample Product");
+    
+    mockProduct.setDescription("Sample Description");
+    
+    mockProduct.setPrice(100.0);
+    when(productRepository.save(mockProduct)).thenReturn(mockProduct);
+    
+    Product result = productController.createProduct(mockProduct);
+    
+    assertThat(result).isNotNull();
+    assertThat(result.getName()).isEqualTo(mockProduct.getName());
+    assertThat(result.getDescription()).isEqualTo(mockProduct.getDescription());
+    assertThat(result.getPrice()).isEqualTo(mockProduct.getPrice());
+    verify(productRepository, times(1)).save(mockProduct);
+}
+
+/*ROOST_METHOD_HASH=createProduct_16b670a647
+ROOST_METHOD_SIG_HASH=createProduct_36b748883e
+
+*/public void verifyProductCreationWithNullInput() {
+    
+    Product mockProduct = null;
+    when(productRepository.save(mockProduct)).thenThrow(IllegalArgumentException.class);
+    
+    try {
+        productController.createProduct(mockProduct);
+    } catch (IllegalArgumentException e) {
+        assertThat(e).isInstanceOf(IllegalArgumentException.class);
+    }
+    verify(productRepository, times(0)).save(mockProduct);
+}
+
+/*ROOST_METHOD_HASH=createProduct_16b670a647
+ROOST_METHOD_SIG_HASH=createProduct_36b748883e
+
+*/public void verifyProductCreationWithEmptyFields() {
+    
+    Product mockProduct = new Product();
+    
+    mockProduct.setName("");
+    
+    mockProduct.setDescription("");
+    
+    mockProduct.setPrice(0.0);
+    when(productRepository.save(mockProduct)).thenReturn(mockProduct);
+    
+    Product result = productController.createProduct(mockProduct);
+    
+    assertThat(result).isNotNull();
+    assertThat(result.getName()).isEqualTo(mockProduct.getName());
+    assertThat(result.getDescription()).isEqualTo(mockProduct.getDescription());
+    assertThat(result.getPrice()).isEqualTo((Double) mockProduct.getPrice());
+    verify(productRepository, times(1)).save(mockProduct);
+}
+
+/*ROOST_METHOD_HASH=createProduct_16b670a647
+ROOST_METHOD_SIG_HASH=createProduct_36b748883e
+
+*/public void verifyProductCreationIntegrationTest() {
+    
+    Product mockProduct = new Product();
+    
+    mockProduct.setName("Integration Test Product");
+    
+    mockProduct.setDescription("Integration Test Description");
+    
+    mockProduct.setPrice(200.0);
+    when(productRepository.save(mockProduct)).thenReturn(mockProduct);
+    
+    Product result = productController.createProduct(mockProduct);
+    
+    assertThat(result).isNotNull();
+    assertThat(result.getName()).isEqualTo(mockProduct.getName());
+    verify(productRepository, times(1)).save(mockProduct);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdReturnsProductForValidID() {
+    
+    
+    Long validId = 1L;
+    
+    Product mockProduct = new Product();
+    mockProduct.setId(validId);
+    when(productRepository.findById(validId)).thenReturn(Optional.of(mockProduct));
+    
+    ResponseEntity<Product> response = productController.getProductById(validId);
+    
+    assertThat(response.getStatusCodeValue()).isEqualTo(200);
+    assertThat(response.getBody()).isSameAs(mockProduct);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdReturnsNotFoundForInvalidID() {
+    
+    
+    Long invalidId = 999L;
+    when(productRepository.findById(invalidId)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.getProductById(invalidId);
+    
+    assertThat(response.getStatusCodeValue()).isEqualTo(404);
+    assertThat(response.getBody()).isNull();
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdHandlesNullID() {
+    
+    try {
+        productController.getProductById(null);
+    } catch (IllegalArgumentException e) {
+        assertThat(e).isInstanceOf(IllegalArgumentException.class);
+    }
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdOnEmptyDatabase() {
+    
+    
+    Long testId = 1L;
+    when(productRepository.findById(testId)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.getProductById(testId);
+    
+    assertThat(response.getStatusCodeValue()).isEqualTo(404);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdWithMultipleProductsInRepository() {
+    
+    
+    Long validId = 2L;
+    Product targetProduct = new Product();
+    targetProduct.setId(validId);
+    when(productRepository.findById(validId)).thenReturn(Optional.of(targetProduct));
+    
+    ResponseEntity<Product> response = productController.getProductById(validId);
+    
+    assertThat(response.getStatusCodeValue()).isEqualTo(200);
+    assertThat(response.getBody().getId()).isEqualTo(targetProduct.getId());
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdWithDatabaseConnectionFailure() {
+    
+    
+    Long anyId = 1L;
+    when(productRepository.findById(anyId)).thenThrow(new RuntimeException("Database Unreachable"));
+    
+    try {
+        productController.getProductById(anyId);
+    } catch (RuntimeException e) {
+        assertThat(e.getMessage()).isEqualTo("Database Unreachable");
+    }
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdOnlyRetrievesTargetProduct() {
+    
+    
+    Long targetId = 3L;
+    Product targetProduct = new Product();
+    targetProduct.setId(targetId);
+    when(productRepository.findById(targetId)).thenReturn(Optional.of(targetProduct));
+    
+    ResponseEntity<Product> response = productController.getProductById(targetId);
+    
+    assertThat(response.getStatusCodeValue()).isEqualTo(200);
+    assertThat(response.getBody().getId()).isEqualTo(targetId);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdWithBoundaryValues() {
+    
+    when(productRepository.findById(Long.MIN_VALUE)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> minResponse = productController.getProductById(Long.MIN_VALUE);
+    
+    assertThat(minResponse.getStatusCodeValue()).isEqualTo(404);
+    
+    when(productRepository.findById(Long.MAX_VALUE)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> maxResponse = productController.getProductById(Long.MAX_VALUE);
+    
+    assertThat(maxResponse.getStatusCodeValue()).isEqualTo(404);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/public void getProductByIdWithNullRepository() {
+    
+    ProductController controllerWithNullRepo = new ProductController();
+    
+    
+    try {
+        
+        controllerWithNullRepo.getProductById(1L);
+    } catch (NullPointerException e) {
+        assertThat(e).isInstanceOf(NullPointerException.class);
+    }
+}
+}

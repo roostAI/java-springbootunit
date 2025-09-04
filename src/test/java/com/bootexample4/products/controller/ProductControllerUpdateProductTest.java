@@ -1,4 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
 
 // ********RoostGPT********
 /*
@@ -31,10 +30,15 @@ Execution:
 Validation:  
   The assertion verifies that the existing product is successfully found and updated according to the given input values, and the modified product is returned in the HTTP response with a status of 200 OK.  
 
+
+roost_feedback [05/09/2025, 12:53:26 AM]:Change this function:\r\n```\r\n void setUp() {\r\n        MockitoAnnotations.openMocks(this);\r\n        productController = new ProductController(); // Updated constructor call to match the no-argument constructor\r\n        productController.setProductRepository(productRepository); // Explicitly injecting the mock repository\r\n    }\r\n```\r\nTo this:\r\n```\r\nvoid setUp() {\r\n        MockitoAnnotations.openMocks(this);\r\n        productController = new ProductController(); // Updated constructor call to match the no-argument constructor\r\n    }\r\n```
 */
 
 // ********RoostGPT********
-package com.bootexample4.products.controller;import com.bootexample4.products.model.Product;
+
+package com.bootexample4.products.controller;
+
+import com.bootexample4.products.model.Product;
 import com.bootexample4.products.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,12 +58,13 @@ class ProductControllerUpdateProductTest {
     @Mock
     private ProductRepository productRepository;
     private ProductController productController;
+
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
         productController = new ProductController(); // Updated constructor call to match the no-argument constructor
-        productController.setProductRepository(productRepository); // Explicitly injecting the mock repository
     }
+
     @Test
     @Tag("valid")
     public void updateExistingProduct() {
@@ -80,6 +85,7 @@ class ProductControllerUpdateProductTest {
         // Assert
         assertEquals(ResponseEntity.ok(updatedProductInput), response);
     }
+
     @Test
     @Tag("invalid")
     public void updateNonExistentProduct() {
@@ -95,6 +101,7 @@ class ProductControllerUpdateProductTest {
         // Assert
         assertEquals(ResponseEntity.notFound().build(), response);
     }
+
     @Test
     @Tag("boundary")
     public void updateProductWithNullFields() {

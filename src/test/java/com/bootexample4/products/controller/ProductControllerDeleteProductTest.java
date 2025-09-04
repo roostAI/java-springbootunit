@@ -1,4 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
 
 // ********RoostGPT********
 /*
@@ -33,10 +32,15 @@ Execution:
 Validation:  
   The assertion ensures that the method correctly identifies the existing product, deletes it, and returns the appropriate success response. This is critical to confirm proper deletion functionality for valid inputs.  
 
+
+roost_feedback [05/09/2025, 12:14:54 AM]:change this function:\r\n```\r\n public void setup() {\r\n        productRepository = Mockito.mock(ProductRepository.class);\r\n        productController = Mockito.spy(new ProductController()); // Fixed constructor issue\r\n        productController.productRepository = productRepository; // Set the mocked repository explicitly\r\n    }\r\n```\r\nto this:\r\n```\r\n public void setup() {\r\n        productRepository = Mockito.mock(ProductRepository.class);\r\n        productController = Mockito.spy(new ProductController()); // Fixed constructor issue\r\n    }\r\n```
 */
 
 // ********RoostGPT********
-package com.bootexample4.products.controller;import com.bootexample4.products.model.Product;
+
+package com.bootexample4.products.controller;
+
+import com.bootexample4.products.model.Product;
 import com.bootexample4.products.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -46,20 +50,17 @@ import org.springframework.http.ResponseEntity;
 import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
-import org.junit.jupiter.api.*;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 public class ProductControllerDeleteProductTest {
     private ProductController productController;
     private ProductRepository productRepository;
+
     @BeforeEach
     public void setup() {
         productRepository = Mockito.mock(ProductRepository.class);
         productController = Mockito.spy(new ProductController()); // Fixed constructor issue
-        productController.productRepository = productRepository; // Set the mocked repository explicitly
     }
+
     @Test
     @Tag("valid")
     public void deleteProductSuccessfully() {
@@ -74,6 +75,7 @@ public class ProductControllerDeleteProductTest {
         verify(productRepository, times(1)).delete(mockProduct);
         assertThat((int) response.getStatusCodeValue()).isEqualTo(200); // Type cast added
     }
+
     @Test
     @Tag("invalid")
     public void deleteProductNotFound() {
@@ -86,6 +88,7 @@ public class ProductControllerDeleteProductTest {
         verify(productRepository, never()).delete(any());
         assertThat((int) response.getStatusCodeValue()).isEqualTo(404); // Type cast added
     }
+
     @Test
     @Tag("boundary")
     public void deleteProductWithNullId() {

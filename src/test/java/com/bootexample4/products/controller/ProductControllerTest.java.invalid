@@ -92,6 +92,7 @@ public void createProductWithMissingFields() {
     
     incompleteProduct.setId(2L);
     
+    
     incompleteProduct.setName(null);
     incompleteProduct.setDescription("Incomplete description");
     incompleteProduct.setPrice(50.0);
@@ -180,6 +181,7 @@ public void createProductWithDuplicatedData() {
     Product duplicateProduct = new Product();
     
     duplicateProduct.setId(6L);
+    
     duplicateProduct.setName("Duplicate Product");
     duplicateProduct.setDescription("Duplicate description");
     duplicateProduct.setPrice(400.0);

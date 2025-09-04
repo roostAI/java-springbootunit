@@ -1,4 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
 
 // ********RoostGPT********
 /*
@@ -125,32 +124,33 @@ Execution:
 Validation: 
   This test ensures robustness when repository entries contain null field values and verifies that the method processes such entries correctly without failures.
 
+
+roost_feedback [05/09/2025, 1:49:04 AM]:Remove this constructor:\r\n```\r\n @Autowired\r\n    public ProductControllerGetAllProductsTest() {\r\n        productController.setProductRepository(productRepository);\r\n    }\r\n```\r\nchange this function:\r\n```\r\npublic void getAllProductsThrowsErrorWhenRepositoryIsNull() {\r\n        // Comment: Business logic needs enhancement to handle null repository gracefully\r\n        // Arrange\r\n        ProductController controllerWithNullRepository = new ProductController();\r\n        controllerWithNullRepository.setProductRepository(null);\r\n        // Act & Assert\r\n        assertThrows(NullPointerException.class, controllerWithNullRepository::getAllProducts);\r\n    }\r\n```\r\nTo this:\r\n```\r\npublic void getAllProductsThrowsErrorWhenRepositoryIsNull() {\r\n        // Comment: Business logic needs enhancement to handle null repository gracefully\r\n        // Arrange\r\n        ProductController controllerWithNullRepository = new ProductController();\r\n        // Act & Assert\r\n        assertThrows(NullPointerException.class, controllerWithNullRepository::getAllProducts);\r\n    }\r\n```\r\nDO NOT MAKE ANY OTHER CHANGES IN THE CODE
 */
 
 // ********RoostGPT********
-package com.bootexample4.products.controller;import com.bootexample4.products.model.Product;
+
+package com.bootexample4.products.controller;
+
+import com.bootexample4.products.model.Product;
 import com.bootexample4.products.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Tag;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
 @SpringBootTest
 class ProductControllerGetAllProductsTest {
     private final ProductRepository productRepository = Mockito.mock(ProductRepository.class);
     private final ProductController productController = new ProductController();
-    @Autowired
-    public ProductControllerGetAllProductsTest() {
-        productController.setProductRepository(productRepository);
-    }
+
     @Test
     @Tag("valid")
     public void getAllProductsReturnsEmptyListWhenNoProducts() {
@@ -162,6 +162,7 @@ class ProductControllerGetAllProductsTest {
         assertThat(products).isNotNull();
         assertThat(products).isEmpty();
     }
+
     @Test
     @Tag("valid")
     public void getAllProductsReturnsAllProductsInRepository() {
@@ -173,7 +174,7 @@ class ProductControllerGetAllProductsTest {
         product1.setDescription("Description1");
         product1.setPrice(100.0);
         mockedProducts.add(product1);
-        
+
         Product product2 = new Product();
         product2.setId(2L);
         product2.setName("Product2");
@@ -188,16 +189,17 @@ class ProductControllerGetAllProductsTest {
         assertThat(products).hasSize(mockedProducts.size());
         assertThat(products).isEqualTo(mockedProducts);
     }
+
     @Test
     @Tag("invalid")
     public void getAllProductsThrowsErrorWhenRepositoryIsNull() {
         // Comment: Business logic needs enhancement to handle null repository gracefully
         // Arrange
         ProductController controllerWithNullRepository = new ProductController();
-        controllerWithNullRepository.setProductRepository(null);
         // Act & Assert
         assertThrows(NullPointerException.class, controllerWithNullRepository::getAllProducts);
     }
+
     @Test
     @Tag("boundary")
     public void getAllProductsHandlesLargeDataset() {
@@ -219,6 +221,7 @@ class ProductControllerGetAllProductsTest {
         assertThat(products).hasSize(largeProductList.size());
         assertThat(products).isEqualTo(largeProductList);
     }
+
     @Test
     @Tag("integration")
     public void getAllProductsReturnsConsistentResultsOnRepeatedCalls() {
@@ -230,7 +233,7 @@ class ProductControllerGetAllProductsTest {
         product1.setDescription("Description1");
         product1.setPrice(100.0);
         consistentProductList.add(product1);
-        
+
         Product product2 = new Product();
         product2.setId(2L);
         product2.setName("Product2");
@@ -244,6 +247,7 @@ class ProductControllerGetAllProductsTest {
         // Assert
         assertThat(firstCallResult).isEqualTo(secondCallResult);
     }
+
     @Test
     @Tag("boundary")
     public void getAllProductsDoesNotModifyRepository() {
@@ -268,6 +272,7 @@ class ProductControllerGetAllProductsTest {
         assertThat(products).isEqualTo(initialProducts);
         assertThat(productRepository.findAll()).isEqualTo(initialProducts);
     }
+
     @Test
     @Tag("valid")
     public void getAllProductsHandlesProductsWithNullFields() {

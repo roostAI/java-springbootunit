@@ -28,9 +28,9 @@ import com.bootexample4.products.repository.ProductRepository;
 
     @GetMapping(&quot;/{id}&quot;)
     public ResponseEntity&lt;Product&gt; getProductById(@PathVariable Long id) {
-<span class="nc" id="L31">        return productRepository.findById(id)</span>
-<span class="nc" id="L32">                .map(product -&gt; ResponseEntity.ok().body(product))</span>
-<span class="nc" id="L33">                .orElse(ResponseEntity.notFound().build());</span>
+<span class="fc" id="L31">        return productRepository.findById(id)</span>
+<span class="fc" id="L32">                .map(product -&gt; ResponseEntity.ok().body(product))</span>
+<span class="fc" id="L33">                .orElse(ResponseEntity.notFound().build());</span>
     }
 
     @PutMapping(&quot;/{id}&quot;)

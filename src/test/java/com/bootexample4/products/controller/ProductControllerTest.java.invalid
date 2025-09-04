@@ -1,0 +1,235 @@
+//This single test file is marked invalid as it contains compilation errors.
+package com.bootexample4.products.controller;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Tag;
+import org.mockito.Mock;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Mockito;
+import org.assertj.core.api.Assertions;
+import java.util.ArrayList;
+import java.util.List;
+import com.bootexample4.products.model.Product;
+import com.bootexample4.products.repository.ProductRepository;
+import org.junit.jupiter.api;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
+import java.util.Optional;
+import org.junit.jupiter.api.Assertions.assertEquals;
+
+@ExtendWith(MockitoExtension.class)
+public class ProductControllerTest {
+
+  // Merged class fields
+  private ProductRepository productRepository;
+  private ProductController productController;
+
+  // Merged test methods
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@BeforeEach
+void setup() {
+    
+    MockitoAnnotations.openMocks(this);
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("integration")
+public void getAllProductsReturnsNonEmptyList() {
+    
+    List<Product> mockProducts = new ArrayList<>();
+    
+    Product mockProduct1 = new Product();
+    mockProduct1.setName("Product 1");
+    mockProducts.add(mockProduct1);
+    
+    Product mockProduct2 = new Product();
+    mockProduct2.setName("Product 2");
+    mockProducts.add(mockProduct2);
+    when(productRepository.findAll()).thenReturn(mockProducts);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    assertThat(result).isNotNull();
+    assertThat(result.size()).isEqualTo(mockProducts.size());
+    assertThat(result).containsAll(mockProducts);
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("invalid")
+public void getAllProductsReturnsEmptyListWhenRepositoryIsEmpty() {
+    
+    List<Product> mockProducts = new ArrayList<>();
+    when(productRepository.findAll()).thenReturn(mockProducts);
+    
+    List<Product> result = productController.getAllProducts();
+    
+    assertThat(result).isNotNull();
+    assertThat(result).isEmpty();
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+private Product createProduct(Long id, String name, String description, Double price) {
+    Product product = new Product();
+    product.setId(id);
+    product.setName(name);
+    product.setDescription(description);
+    if (price != null) {
+        product.setPrice(price);
+    } else {
+        
+        product.setPrice(0.0);
+    }
+    return product;
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@BeforeEach
+public void setup() {
+    
+    Mockito.reset(productRepository);
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("valid")
+public void updateExistingProductSuccessfully() {
+    
+    Long id = 1L;
+    Product existingProduct = createProduct(id, "Old Name", "Old Description", 100.0);
+    Product updatedProductInput = createProduct(id, "New Name", "New Description", 200.0);
+    when(productRepository.findById(id)).thenReturn(Optional.of(existingProduct));
+    when(productRepository.save(existingProduct)).thenReturn(updatedProductInput);
+    
+    ResponseEntity<Product> response = productController.updateProduct(id, updatedProductInput);
+    
+    
+    assertEquals((Product) response.getBody(), updatedProductInput);
+    assertEquals(response.getStatusCodeValue(), 200);
+    verify(productRepository, times(1)).findById(id);
+    verify(productRepository, times(1)).save(existingProduct);
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("invalid")
+public void updateNonExistentProductResultingInNotFound() {
+    
+    Long id = 999L;
+    Product updatedProductInput = createProduct(id, "Updated Name", "Updated Description", 300.0);
+    when(productRepository.findById(id)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.updateProduct(id, updatedProductInput);
+    
+    assertEquals(response.getStatusCodeValue(), 404);
+    assertEquals(response.getBody(), null);
+    verify(productRepository, times(1)).findById(id);
+    verify(productRepository, never()).save(any(Product.class));
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("valid")
+public void updateProductWithNullFields() {
+    
+    Long id = 1L;
+    Product existingProduct = createProduct(id, "Old Name", "Old Description", 100.0);
+    
+    Product updatedProductInput = createProduct(id, null, null, null);
+    when(productRepository.findById(id)).thenReturn(Optional.of(existingProduct));
+    
+    when(productRepository.save(existingProduct)).thenReturn(existingProduct);
+    
+    ResponseEntity<Product> response = productController.updateProduct(id, updatedProductInput);
+    
+    assertEquals((Product) response.getBody(), existingProduct);
+    assertEquals(response.getStatusCodeValue(), 200);
+    verify(productRepository, times(1)).findById(id);
+    verify(productRepository, times(1)).save(existingProduct);
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("invalid")
+public void updateProductWithInvalidIdType() {
+    
+    
+    
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("invalid")
+public void updateProductWithInvalidData() {
+    
+    Long id = 1L;
+    Product existingProduct = createProduct(id, "Old Name", "Old Description", 100.0);
+    
+    Product invalidProductInput = createProduct(id, "", "Updated Description", -100.0);
+    when(productRepository.findById(id)).thenReturn(Optional.of(existingProduct));
+    
+    ResponseEntity<Product> response = productController.updateProduct(id, invalidProductInput);
+    
+    
+    
+    assertEquals(response.getStatusCodeValue(), 200);
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("boundary")
+public void updateProductWithBoundaryId() {
+    
+    
+    Long id = Long.MAX_VALUE;
+    Product existingProduct = createProduct(id, "Old Name", "Old Description", 100.0);
+    Product updatedProductInput = createProduct(id, "New Name", "New Description", 200.0);
+    when(productRepository.findById(id)).thenReturn(Optional.of(existingProduct));
+    when(productRepository.save(existingProduct)).thenReturn(updatedProductInput);
+    
+    ResponseEntity<Product> response = productController.updateProduct(id, updatedProductInput);
+    
+    assertEquals((Product) response.getBody(), updatedProductInput);
+    assertEquals(response.getStatusCodeValue(), 200);
+    verify(productRepository, times(1)).findById(id);
+    verify(productRepository, times(1)).save(existingProduct);
+}
+}

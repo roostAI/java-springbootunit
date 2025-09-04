@@ -1,0 +1,284 @@
+//This single test file is marked invalid as it contains compilation errors.
+package com.bootexample4.products.controller;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.ResponseEntity;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import com.bootexample4.products.model.Product;
+import com.bootexample4.products.repository.ProductRepository;
+import org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions.assertThrows;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import java.util.Optional;
+import org.assertj.core.api.Assertions.assertThat;
+import org.mockito.Mockito.when;
+import org.junit.jupiter.api;
+import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpStatus;
+
+@ExtendWith(MockitoExtension.class)
+public class ProductControllerTest {
+
+  // Merged class fields
+  private ProductRepository productRepository;
+  private ProductController productController;
+  private Product mockProduct;
+
+  // Merged test methods
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("valid")
+public void testVerifyProductsRetrievalFromRepository() {
+    List<Product> expectedProductsList = Arrays.asList(new Product(), new Product());
+    Mockito.when(productRepository.findAll()).thenReturn(expectedProductsList);
+    List<Product> actualProductsList = productController.getAllProducts();
+    assertEquals(expectedProductsList, actualProductsList, "The retrieved list should match the expected list.");
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("valid")
+public void testEnsureEmptyRepositoryReturnsEmptyList() {
+    Mockito.when(productRepository.findAll()).thenReturn(Collections.emptyList());
+    List<Product> actualProductsList = productController.getAllProducts();
+    assertEquals(0, actualProductsList.size(), "The retrieved list should be empty.");
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("valid")
+public void testValidateMultipleProductsReturnedCorrectly() {
+    Product product1 = new Product();
+    Product product2 = new Product();
+    Product product3 = new Product();
+    List<Product> expectedProductsList = Arrays.asList(product1, product2, product3);
+    Mockito.when(productRepository.findAll()).thenReturn(expectedProductsList);
+    List<Product> actualProductsList = productController.getAllProducts();
+    assertEquals(expectedProductsList, actualProductsList, "The retrieved list should match multiple products from repository.");
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("invalid")
+public void testVerifyErrorHandlingWhenRepositoryFails() {
+    Mockito.when(productRepository.findAll()).thenThrow(new RuntimeException("Database error!"));
+    assertThrows(RuntimeException.class, () -> productController.getAllProducts(), "Should throw a runtime exception upon repository failure.");
+}
+
+/*ROOST_METHOD_HASH=getAllProducts_fef141838b
+ROOST_METHOD_SIG_HASH=getAllProducts_7e38cc05f6
+
+*/
+@Test
+@Tag("boundary")
+public void testConfirmNullHandlingInProductsList() {
+    
+    Product productWithNullFields = new Product();
+    List<Product> predefinedProductsListWithNulls = Collections.singletonList(productWithNullFields);
+    Mockito.when(productRepository.findAll()).thenReturn(predefinedProductsListWithNulls);
+    List<Product> actualProductsList = productController.getAllProducts();
+    
+    assertEquals(1, actualProductsList.size(), "The list size should match the predefined list.");
+    assertEquals(null, actualProductsList.get(0).getName(), "Product name should be null as predefined.");
+    assertEquals(null, actualProductsList.get(0).getDescription(), "Product description should be null as predefined.");
+    assertEquals(0.0, actualProductsList.get(0).getPrice(), "Product price should be 0.0 as default.");
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/
+@BeforeEach
+public void setUp() {
+    mockProduct = new Product();
+    
+    mockProduct.setId(1L);
+    mockProduct.setName("Test Product");
+    mockProduct.setDescription("Test Description");
+    
+    mockProduct.setPrice(100.0);
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/
+@Test
+@Tag("valid")
+public void validProductIdReturnsProduct() {
+    
+    
+    Long validProductId = 1L;
+    when(productRepository.findById(validProductId)).thenReturn(Optional.of(mockProduct));
+    
+    ResponseEntity<Product> response = productController.getProductById(validProductId);
+    
+    assertThat(response.getStatusCode().value()).isEqualTo(200);
+    assertThat(response.getBody()).isNotNull();
+    assertThat(response.getBody().getId()).isEqualTo(mockProduct.getId());
+    assertThat(response.getBody().getName()).isEqualTo(mockProduct.getName());
+    assertThat(response.getBody().getDescription()).isEqualTo(mockProduct.getDescription());
+    assertThat((Double) response.getBody().getPrice()).isEqualTo((Double) mockProduct.getPrice());
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/
+@Test
+@Tag("invalid")
+public void invalidProductIdReturnsNotFound() {
+    
+    
+    Long invalidProductId = -999L;
+    when(productRepository.findById(invalidProductId)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.getProductById(invalidProductId);
+    
+    assertThat(response.getStatusCode().value()).isEqualTo(404);
+    assertThat(response.getBody()).isNull();
+}
+
+/*ROOST_METHOD_HASH=getProductById_a31a3ac160
+ROOST_METHOD_SIG_HASH=getProductById_d22f3ea272
+
+*/
+@Test
+@Tag("boundary")
+public void nullProductIdReturnsNotFound() {
+    
+    
+    Long nullProductId = null;
+    when(productRepository.findById(Mockito.any())).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.getProductById(nullProductId);
+    
+    assertThat(response.getStatusCode().value()).isEqualTo(404);
+    assertThat(response.getBody()).isNull();
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@BeforeEach
+void setUp() {
+    MockitoAnnotations.openMocks(this);
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("valid")
+public void updateProductValidScenario() {
+    
+    
+    Long productId = 1L;
+    Product existingProduct = new Product();
+    existingProduct.setId(productId);
+    existingProduct.setName("Old Name");
+    existingProduct.setDescription("Old Description");
+    existingProduct.setPrice(100.0);
+    Product updatedProductRequest = new Product();
+    updatedProductRequest.setName("New Name");
+    updatedProductRequest.setDescription("New Description");
+    updatedProductRequest.setPrice(150.0);
+    Product updatedProduct = new Product();
+    updatedProduct.setId(productId);
+    updatedProduct.setName("New Name");
+    updatedProduct.setDescription("New Description");
+    updatedProduct.setPrice(150.0);
+    when(productRepository.findById(productId)).thenReturn(Optional.of(existingProduct));
+    when(productRepository.save(existingProduct)).thenReturn(updatedProduct);
+    
+    ResponseEntity<Product> response = productController.updateProduct(productId, updatedProductRequest);
+    
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+    assertThat(response.getBody().getName()).isEqualTo(updatedProductRequest.getName());
+    assertThat(response.getBody().getDescription()).isEqualTo(updatedProductRequest.getDescription());
+    assertThat(response.getBody().getPrice()).isEqualTo((double) updatedProductRequest.getPrice());
+}
+
+/*ROOST_METHOD_HASH=updateProduct_e220585694
+ROOST_METHOD_SIG_HASH=updateProduct_9454a9af90
+
+*/
+@Test
+@Tag("invalid")
+public void updateProductInvalidScenario() {
+    
+    
+    Long invalidProductId = 999L;
+    Product updatedProductRequest = new Product();
+    updatedProductRequest.setName("Any Name");
+    updatedProductRequest.setDescription("Any Description");
+    updatedProductRequest.setPrice(200.0);
+    when(productRepository.findById(invalidProductId)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Product> response = productController.updateProduct(invalidProductId, updatedProductRequest);
+    
+    assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+    assertThat(response.getBody()).isNull();
+}
+
+/*ROOST_METHOD_HASH=deleteProduct_5ea3a876a4
+ROOST_METHOD_SIG_HASH=deleteProduct_dcaff736d4
+
+*/
+@Test
+@Tag("valid")
+public void deleteExistingProductSuccessfully() {
+    
+    
+    Long validId = 1L;
+    
+    Product mockProduct = new Product();
+    when(productRepository.findById(validId)).thenReturn(Optional.of(mockProduct));
+    
+    ResponseEntity<Object> responseEntity = productController.deleteProduct(validId);
+    
+    verify(productRepository, times(1)).delete(mockProduct);
+    assertThat(responseEntity.getStatusCodeValue()).isEqualTo(200);
+}
+
+/*ROOST_METHOD_HASH=deleteProduct_5ea3a876a4
+ROOST_METHOD_SIG_HASH=deleteProduct_dcaff736d4
+
+*/
+@Test
+@Tag("invalid")
+public void deleteNonExistingProductReturnsNotFound() {
+    
+    
+    Long invalidId = 999L;
+    when(productRepository.findById(invalidId)).thenReturn(Optional.empty());
+    
+    ResponseEntity<Object> responseEntity = productController.deleteProduct(invalidId);
+    
+    verify(productRepository, never()).delete(any());
+    assertThat(responseEntity.getStatusCodeValue()).isEqualTo(404);
+}
+}

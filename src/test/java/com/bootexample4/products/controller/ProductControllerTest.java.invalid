@@ -23,8 +23,10 @@ import org.junit.jupiter.api.Assertions.assertNotNull;
 import org.mockito.MockitoAnnotations;
 import org.assertj.core.api.Assertions.assertThat;
 import org.mockito.Mockito.when;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 @ExtendWith(MockitoExtension.class)
+@SpringJUnitConfig
 public class ProductControllerTest {
 
   // Merged class fields
@@ -419,5 +421,166 @@ public void handleUnrealisticLargeId() {
     
     verify(productRepository, never()).findById(any());
     assertThat(response.getStatusCodeValue()).isEqualTo(404);
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@BeforeEach
+void setUp() {
+    productRepository = mock(ProductRepository.class);
+    productController = new ProductController();
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWithValidInput() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertNotNull(result, "Product should not be null.");
+    assertEquals(product, result, "Returned product should match input product.");
+    verify(productRepository, times(1)).save(product);
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void handleExceptionDuringCreation() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenThrow(new RuntimeException("Database exception"));
+    assertThrows(RuntimeException.class, () -> productController.createProduct(product), "Should throw RuntimeException when repository fails.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWithNullInput() {
+    Product product = null;
+    assertThrows(NullPointerException.class, () -> productController.createProduct(product), "Should throw NullPointerException when input Product is null.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWithEmptyAttributes() {
+    Product product = new Product();
+    product.setName("");
+    product.setDescription("");
+    
+    product.setPrice(0.0);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertNotNull(result, "Product should not be null.");
+    assertEquals(product, result, "Returned product should match input product with empty attributes.");
+    verify(productRepository, times(1)).save(product);
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWhenRepositoryNull() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    assertThrows(NullPointerException.class, () -> productController.createProduct(product), "Should throw NullPointerException when repository is null.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void repositoryInteractionDuringCreation() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertEquals(product, result, "Returned product should match input product.");
+    verify(productRepository, times(1)).save(product);
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void checkReturnTypeAfterCreation() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertTrue(result instanceof Product, "Returned object should be an instance of Product.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void repositoryReturnsNullDuringCreation() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenReturn(null);
+    Product result = productController.createProduct(product);
+    assertNull(result, "Returned product should be null when repository returns null.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWithLargePriceValue() {
+    Product product = new Product();
+    product.setName("Valid Name");
+    product.setDescription("Valid Description");
+    product.setPrice(Double.MAX_VALUE);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertNotNull(result, "Returned product should not be null.");
+    assertEquals(Double.MAX_VALUE, result.getPrice(), "Returned product's price should match the large price value.");
+}
+
+/*ROOST_METHOD_HASH=createProduct_36b748883e
+ROOST_METHOD_SIG_HASH=createProduct_16b670a647
+
+*/
+@Test
+public void createProductWithSpecialCharacters() {
+    Product product = new Product();
+    product.setName("Name!@#$%^");
+    product.setDescription("Description*&^%$");
+    product.setPrice(100.0);
+    when(productRepository.save(product)).thenReturn(product);
+    Product result = productController.createProduct(product);
+    assertNotNull(result, "Returned product should not be null.");
+    assertEquals("Name!@#$%^", result.getName(), "Product name should match input with special characters.");
+    assertEquals("Description*&^%$", result.getDescription(), "Product description should match input with special characters.");
 }
 }
